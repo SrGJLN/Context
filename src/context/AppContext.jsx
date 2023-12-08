@@ -13,7 +13,7 @@ const AppProvider = ({ children }) => {
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data);
-      setImages(data);
+      setImages(data.photos);
     } catch (error) {
       console.error(error);
     }
