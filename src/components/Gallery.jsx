@@ -7,7 +7,7 @@ const Gallery = () => {
 
   return (
     <main className="container">
-      <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+      <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
         {images.map((image) => (
           <div className="col mt-5 cardT" key={image.id}>
             <div className="card mt-3 border-light" style={{ width: "18rem" }}>
