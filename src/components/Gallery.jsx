@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext";
 import IconHeart from "./IconHeart";
 
 const Gallery = () => {
-  const { images } = useContext(AppContext);
+  const { images, isFavorite, toggleFavorite} = useContext(AppContext);
 
   return (
     <main className="container">
@@ -17,7 +17,10 @@ const Gallery = () => {
                 alt="{e.name}"
                 style={{ width: "18rem", height: "15rem" }}
               />
-              <IconHeart filled={image.isFavorite} />
+              <IconHeart
+                isFavorite={isFavorite(image.id)}
+                onClick={() => toggleFavorite(image.id)}
+              />
               <div className="card-body">
                 <h5 className="card-title">{image.photographer}</h5>
               </div>
@@ -31,14 +34,3 @@ const Gallery = () => {
 
 export default Gallery;
 
-{
-  /* <div className='galley grid-columns-5 p-3'>
-{images.map((image) => (
-  <div key={image.id}>
-    <img src={image.src.large} alt={image.alt} />
-    <IconHeart filled={image.isFavorite}
-    />
-  </div>
-))}
-</div> */
-}

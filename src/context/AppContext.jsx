@@ -12,7 +12,6 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(URL);
       const data = await response.json();
-      console.log(data);
       setImages(data.photos);
     } catch (error) {
       console.error(error);
