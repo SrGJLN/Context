@@ -8,7 +8,7 @@ const Favorites = () => {
   return (
     <main className="container">
       <h2>Mis Favoritas</h2>
-      <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+      <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
         
         {favoriteImages.map((image) => (
           <div className="col mt-5 cardT" key={image.id}>
